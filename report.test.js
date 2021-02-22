@@ -27,5 +27,11 @@ describe("#report", () => {
     test("input of 'red' outputs 'Red: 1'", () => {
       expect(report("red")).toEqual("Red: 1");
     });
+    test("input of 'Green, Red, Green, red' outputs 'Green: 2, Red: 2'", () => {
+      expect(report("Green, Red, Green, red")).toEqual("Green: 2, Red: 2");
+    });
+    test("inputs of 'red, Amber, red, red' outputs 'Amber: 1, Red: 3',", () => {
+      expect(report("red, Amber, red, red")).toEqual("Amber: 1, Red: 3");
+    });
   });
 });

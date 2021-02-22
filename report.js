@@ -25,6 +25,10 @@ function report(string) {
     return `Green: ${greenCounter}, Amber: ${amberCounter}`;
   } else if (greenCounter === 0 && amberCounter === 0 && redCounter > 0) {
     return `Red: ${redCounter}`;
+  } else if (greenCounter > 0 && amberCounter === 0 && redCounter > 0) {
+    return `Green: ${greenCounter}, Red: ${redCounter}`;
+  } else if (greenCounter === 0 && amberCounter > 0 && redCounter > 0) {
+    return `Amber: ${amberCounter}, Red: ${redCounter}`;
   }
 }
 
