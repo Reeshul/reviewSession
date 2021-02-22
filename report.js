@@ -2,24 +2,23 @@ function report(string) {
   arrayOfColours = string.split(", ");
 
   let greenCounter = 0;
+  let amberCounter = 0;
+  let redCounter = 0;
 
   for (let i = 0; i < arrayOfColours.length; i++) {
     if (arrayOfColours[i].toLowerCase() === "green") {
       greenCounter++;
     }
+    if (arrayOfColours[i].toLowerCase() === "amber") {
+      amberCounter++;
+    }
   }
 
-  return `Green: ${greenCounter}`;
-
-  // if (string === "Green") {
-  //   return "Green: 1";
-  // } else if (string === "Green, Green") {
-  //   return "Green: 2";
-  // } else {
-  //   return "Green: 3";
-  // }
-
-  // return arrayOfColours;
+  if (greenCounter > 0 && amberCounter === 0 && redCounter === 0) {
+    return `Green: ${greenCounter}`;
+  } else if (greenCounter === 0 && amberCounter > 0 && redCounter === 0) {
+    return `Amber: ${amberCounter}`;
+  }
 }
 
 module.exports = report;
