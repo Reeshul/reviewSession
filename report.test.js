@@ -16,5 +16,11 @@ describe("#report", () => {
     test("input of 'Amber' outputs 'Amber: 1'", () => {
       expect(report("Amber")).toEqual("Amber: 1");
     });
+    test("input of 'Amber, Amber, Amber' outputs 'Amber: 3'", () => {
+      expect(report("Amber, Amber, Amber")).toEqual("Amber: 3");
+    });
+    test("input of 'Amber, Green, Amber' outputs 'Green: 1, Amber: 2'", () => {
+      expect(report("Amber, Green, Amber")).toEqual("Green: 1, Amber: 2");
+    });
   });
 });
