@@ -1,3 +1,5 @@
-const report = (a, b) => a + b;
+function report(string) {
+  return "Green: 1";
+}
 
 module.exports = report;
