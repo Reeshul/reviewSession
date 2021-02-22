@@ -23,4 +23,9 @@ describe("#report", () => {
       expect(report("Amber, Green, Amber")).toEqual("Green: 1, Amber: 2");
     });
   });
+  describe("Greens and/or Ambers and/or Reds", () => {
+    test("input of 'red' outputs 'Red: 1'", () => {
+      expect(report("red")).toEqual("Red: 1");
+    });
+  });
 });

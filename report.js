@@ -12,6 +12,9 @@ function report(string) {
     if (arrayOfColours[i].toLowerCase() === "amber") {
       amberCounter++;
     }
+    if (arrayOfColours[i].toLowerCase() === "red") {
+      redCounter++;
+    }
   }
 
   if (greenCounter > 0 && amberCounter === 0 && redCounter === 0) {
@@ -20,6 +23,8 @@ function report(string) {
     return `Amber: ${amberCounter}`;
   } else if (greenCounter > 0 && amberCounter > 0 && redCounter === 0) {
     return `Green: ${greenCounter}, Amber: ${amberCounter}`;
+  } else if (greenCounter === 0 && amberCounter === 0 && redCounter > 0) {
+    return `Red: ${redCounter}`;
   }
 }
 
