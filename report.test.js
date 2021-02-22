@@ -8,5 +8,8 @@ describe("#report", () => {
     test("input of 'Green, Green' outputs 'Green: 2", () => {
       expect(report("Green, Green")).toEqual("Green: 2");
     });
+    test("input of 'Green, Green, Green' outputs 'Green: 3", () => {
+      expect(report("Green, green, Green")).toEqual("Green: 3");
+    });
   });
 });
